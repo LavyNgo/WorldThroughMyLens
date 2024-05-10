@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssfiles/login_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>WorldThroughMyLens Login Page</title>
+</head>
+
+<body>
+    <form action="" method="">
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h2>World Through My Lens</h2>
+        </div>
+
+        <!-- Main container -->
+        <div class="mainContainer">
+            <!-- Username -->
+            <label for="username">Username:</label>
+            <input type="text" placeholder="Enter Email" name="username" id="username" required>
+
+            <br><br>
+
+            <!-- Password -->
+            <label for="pswrd">Password:</label>
+            <input type="password" placeholder="Enter Password" name="pswrd" id="pswrd" required>
+
+            <br><br>
+
+            <!-- sub container for the checkbox and forgot password link -->
+            <div class="subcontainer">
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="loginbtn" name="loginBtn" id="loginBtn">LOGIN</button>
+
+
+            <!-- Sign up link and admin log in link -->
+            <p class="register">Don't have an account yet? <a href="register.html">Register here!</a></p>
+            <p class="register">Back to homepage? <a href="index.html">Click here!</a></p>
+
+        </div>
+
+    </form>
+</body>
+<script type="module" src="src/login.js" defer></script>
+<!-- <script type="module" src="src/index.js" defer></script> -->
+
+
+</html>
