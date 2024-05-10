@@ -1,0 +1,620 @@
+/* Google Font Import Link */
+.barlow-regular {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* FOR HEADER (NAV BAR) */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    transition: all 0.4s ease;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+nav.sticky {
+    padding: 15px 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .nav-content {
+    height: 100%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo a {
+    font-weight: 500;
+    font-size: clamp(25px, 1.5vw, 35px);
+    color: #fff;
+    text-shadow: -2px 2px 0 #000,
+        1px 1px 0 #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    letter-spacing: 0.05cm;
+}
+
+.nav-content .nav-links,
+.menu {
+    display: flex;
+}
+
+.nav-content .nav-links .menu li {
+    list-style: none;
+    margin: 0 8px;
+}
+
+.nav-content .nav-links .menu li #logout {
+    visibility: hidden;
+    /* hidden the logout btn */
+}
+
+.nav-links .menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: clamp(17px, 1.5vw, 21px);
+    text-shadow: -1px 1px #000,
+        1px 1px 0 #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    font-weight: 400;
+    padding: 10px 7px;
+    transition: all 0.4s ease;
+    letter-spacing: 0.05cm;
+}
+
+.nav-links .menu li a:hover {
+    color: #4070f4;
+    font-size: 22px;
+}
+
+nav.sticky .nav-links .menu li a {
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+nav.sticky .nav-links .menu li a:hover {
+    color: #4070f4;
+}
+
+
+/* CART */
+#cart-container {
+    z-index: 1;
+    background-color: #272727;
+    color: #fff;
+    width: 400px;
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+}
+
+#cart-container h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 500;
+    text-align: center;
+}
+
+#cart-container .cartBtn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#cart-container .cartBtn button {
+    background-color: yellow;
+    border: none;
+    font-weight: 500;
+}
+
+#cart-container .cartBtn button.closeCart {
+    background-color: white;
+}
+
+#cart-container .listCart {
+    overflow: auto;
+}
+
+#cart-container .listCart::-webkit-scrollbar {
+    width: 0;
+}
+
+#cart-container {
+    right: -400px;
+    transition: 0.5s;
+}
+
+body.activeTabCart #cart-container {
+    right: 0;
+}
+
+body.activeTabCart .navbar {
+    transform: translateX(-200px);
+}
+
+/* HOME PAGE */
+.homepage {
+    height: 80vh;
+    height: 80dvh;
+    width: 100%;
+    background: url("../images/DSCF1500.JPG") no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 2;
+}
+
+.homepage .content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.homepage .content h1 {
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.homepage .content .text {
+    /* background: transparent;
+    backdrop-filter: blur(15px); */
+    position: relative;
+    background: #fff;
+    color: #000;
+    max-width: 1000px;
+    margin-bottom: 50px;
+    padding: 20px 50px 40px 40px;
+    border-radius: 40px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.content a {
+    background: #fff;
+    color: #000;
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 10px 30px;
+    border-radius: 15px;
+    transition: 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    /* background: transparent;
+    backdrop-filter: blur(15px); */
+}
+
+.content a:hover {
+    color: #4070f4;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 22px;
+}
+
+
+
+/* ABOUT US PAGE */
+.aboutme-container {
+    background: rgb(255, 255, 255);
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(219, 219, 219, 1) 22%, rgba(195, 195, 195, 1) 51%, rgba(173, 173, 173, 1) 75%, rgba(150, 150, 150, 1) 98%, rgba(0, 0, 0, 0.8309524493391106) 100%); */
+    text-align: justify;
+    padding: 40px 80px;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.aboutme-container h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: 600;
+}
+
+.text-aboutme {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.para {
+    margin-right: 50px;
+}
+
+#mypic img {
+    border: #000 2px solid;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* RESPONSIVE NAVBAR MENU STARTS */
+input[type=checkbox] {
+    display: none;
+}
+
+.stripe {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+
+/* SLIDES */
+.img-container {
+    background: url("../images/DSCF1500.JPG") no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+    text-align: justify;
+    padding: 40px 80px;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.img-container h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+.img-container .row .column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.img-container img {
+    border: #fff 2px solid;
+}
+
+
+/* SERVICES PAGE */
+.service-container {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(150, 150, 150, 1) 50%, rgba(0, 0, 0, 0.8309524493391106) 100%);
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-container .child-service-container {
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.service-container .child-service-container .service-box {
+    position: relative;
+    text-align: center;
+    width: 320px;
+    height: 400px;
+    margin: 50px;
+    background: aliceblue;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-radius: 15px;
+}
+
+.service-container .child-service-container .service-box:hover {
+    transform: scale(1.2);
+    transition: transform 750ms ease-in-out 0s;
+}
+
+/* PRODUCTS PAGE */
+.items-container {
+    text-align: justify;
+    padding: 40px 80px;
+    background: url("../images/DSCF1500.JPG") no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+}
+
+.items-container h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+/* repeat(4,...) : 4 is the number of items allowed in one row, change it to diffrent number for more or less items */
+.items-content {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, auto));
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+}
+
+.row-img {
+    overflow: hidden;
+}
+
+.row-img img {
+    display: block;
+    align-items: center;
+    max-width: 100%;
+    padding: 10px;
+    padding-top: 30px;
+    cursor: pointer;
+}
+
+.items-row {
+    background-color: aqua;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    cursor: pointer;
+    padding-bottom: 20px;
+    border-radius: 15px;
+}
+
+.atc-btn {
+    margin-top: 10px;
+}
+
+.atc-btn a {
+    background-color: rgb(187, 223, 255);
+    padding: 5px 15px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+.footer-container {
+    display: flex;
+    background: #333;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 20vh;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-icon,
+.menu-footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social-icon-item,
+.menu-footer {
+    list-style: none;
+}
+
+.social-icon-link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icon-link:hover {
+    transform: translateY(-10px);
+}
+
+.menu-link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+.menu-link:hover {
+    opacity: 1;
+}
+
+.footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 1100px) {
+
+    /* NAV BAR */
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        margin-top: 50px;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color: #4c9e9e;
+        transition: 0.3s ease;
+    }
+
+    .menu li+li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked~.menu {
+        display: block;
+    }
+
+    .stripe {
+        display: block;
+    }
+
+    nav .logo a {
+        font-weight: 400;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        letter-spacing: 0.03cm;
+        text-shadow: -0.5px 0.5px 0 #000,
+            0.5px 0.5px 0 #000,
+            0.5px -0.5px 0 #000,
+            -0.5px -0.5px 0 #000;
+    }
+
+    .nav-links .menu li a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-weight: 300;
+        text-align: center;
+        padding: 10px 7px;
+        transition: all 0.3s ease;
+        letter-spacing: 0.03cm;
+        text-shadow: -0.2px 0.2px 0 #000,
+            0.2px 0.2px 0 #000,
+            0.2px -0.2px 0 #000,
+            -0.2px -0.2px 0 #000;
+    }
+
+    nav.sticky .nav-links .menu li a {
+        color: black;
+    }
+
+    /* HOME PAGE */
+    .homepage {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .homepage .content h1 {
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .homepage .content .text {
+        max-width: 1200px;
+        margin-bottom: 50px;
+        color: #000;
+        font-size: 15px;
+    }
+
+    .content a {
+        font-size: 18px;
+        margin: 0 10px;
+        padding: 7px 20px;
+    }
+
+    /* ABOUT US PAGE */
+    .aboutme-container {
+        padding: 40px 30px;
+    }
+
+    .text-aboutme {
+        grid-template-columns: none;
+    }
+
+
+    .para {
+        margin-right: 0px;
+    }
+
+    #pic img {
+        margin-top: 20px;
+    }
+
+    /* SLIDES PAGE */
+    .img-container {
+        padding: 40px 30px;
+    }
+
+    .img-container .row .column {
+        float: left;
+        width: 50%;
+        padding: 5px;
+    }
+
+    /* SERVICES PAGE */
+    .service-container .child-service-container .service-box {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: none;
+    }
+
+    .service-container .child-service-container .service-box:hover {
+        transform: scale(1.1);
+    }
+
+
+    /* PRODUCTS PAGE */
+    .items-container {
+        padding: 40px 30px;
+    }
+
+    .items-content {
+        margin-bottom: 10px;
+        grid-template-columns: repeat(2, minmax(150px, auto));
+    }
+}
